@@ -17,6 +17,10 @@
       position: relative;
       overflow: visible;
 
+      @media screen and (max-width: 767px) {
+        padding: 20px;
+      }
+
       .swiper-slide {}
     }
 
@@ -30,12 +34,12 @@
       position: relative;
 
       @media screen and (max-width: 1199px) {
-        padding: 16px 16px 16px 32px;
+        padding: 32px;
       }
 
       @media screen and (max-width: 1023px) {
         height: 420px;
-        padding: 8px;
+        padding: 16px;
         border-radius: 16px;
         overflow: hidden;
       }
@@ -99,6 +103,9 @@
 
       @media screen and (max-width: 1023px) {
         margin-left: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
       }
     }
 
@@ -264,7 +271,7 @@
         text-decoration: underline;
         text-align: left;
         width: fit-content;
-        margin-top: 16px;
+        margin-top: auto;
         text-transform: uppercase;
       }
 
@@ -292,7 +299,7 @@
       background-repeat: no-repeat;
       z-index: 0;
 
-      @media screen and (max-width: 1069px) {
+      @media screen and (max-width: 1023px) {
         display: none;
       }
     }
@@ -340,10 +347,12 @@
         flex: 0 0 45%;
         align-self: flex-start;
         height: 100%;
-        padding: 16px;
+        padding-top: 48px;
       }
 
-      @media screen and (max-width: 639px) {}
+      @media screen and (max-width: 639px) {
+        padding-top: 16px;
+      }
     }
 
     &__title {}
@@ -380,6 +389,7 @@
 
       @media screen and (max-width: 639px) {
         font-size: 12px;
+        max-width: 85%;
       }
     }
 
@@ -549,7 +559,7 @@
     padding-bottom: 114px;
 
     @media screen and (max-width: 1023px) {
-      padding-bottom: 8px;
+      padding-bottom: 16px;
     }
 
     &__content {
@@ -687,7 +697,7 @@
       background-image: url(../img/slide-5/doctors.webp);
       background-image: -webkit-image-set(url(../img/slide-5/doctors.png) 1x);
       background-position: right bottom;
-      padding-left: 8px;
+      padding-left: 16px;
     }
 
     &__logo {
@@ -785,7 +795,7 @@
       @media screen and (max-width: 639px) {
         font-size: 16px;
         margin-top: 8px;
-        max: width 80%;
+        max-width: 100%;
       }
     }
 
@@ -799,7 +809,8 @@
       }
 
       @media screen and (max-width: 639px) {
-        max-width: 70%;
+        max-width: 240px;
+        margin: 8px auto 0;
       }
     }
 
@@ -832,6 +843,10 @@
       @media screen and (max-width: 1023px) {
         margin-top: 8px;
       }
+
+      @media screen and (max-width: 639px) {
+        margin-top: 4px;
+      }
     }
 
     &__speaker-top {
@@ -847,6 +862,7 @@
 
       @media screen and (max-width: 639px) {
         font-size: 12px;
+        margin-top: 4px;
       }
     }
 
@@ -856,6 +872,7 @@
 
       @media screen and (max-width: 639px) {
         font-size: 8px;
+        margin-top: 4px;
       }
     }
 
@@ -1045,11 +1062,11 @@
 
       @media screen and (max-width: 1023px) {
         font-size: 24px;
-        max-width: 70%;
+        max-width: 80%;
       }
 
       @media screen and (max-width: 639px) {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
 
