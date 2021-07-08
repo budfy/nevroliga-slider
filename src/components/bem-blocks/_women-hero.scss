@@ -27,6 +27,23 @@
       transition: all .3s linear;
       padding: 42px 42px 42px 82px;
       height: 500px;
+      position: relative;
+
+      @media screen and (max-width: 1199px) {
+        padding: 16px 16px 16px 32px;
+      }
+
+      @media screen and (max-width: 1023px) {
+        height: 420px;
+        padding: 8px;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      @media screen and (max-width: 639px) {
+        height: 270px;
+        border-radius: 12px;
+      }
 
       &.swiper-slide-active {
         opacity: 1;
@@ -44,6 +61,26 @@
       margin-top: 50px;
       height: 238px;
       flex: 0 0 308px;
+
+      @media screen and (max-width: 1365px) {
+        flex: 0 0 220px;
+      }
+
+      @media screen and (max-width: 1023px) {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        margin-top: 0;
+        overflow: hidden;
+        height: 152px;
+        width: 176px;
+      }
+
+      @media screen and (max-width: 639px) {
+        height: 96px;
+        width: 112px;
+        top: 0;
+      }
     }
 
     &__logo-img {
@@ -55,6 +92,14 @@
 
     &__content {
       margin-left: 40px;
+
+      @media screen and (max-width: 1199px) {
+        margin-left: 16px;
+      }
+
+      @media screen and (max-width: 1023px) {
+        margin-left: 0;
+      }
     }
 
     &__subtitle {
@@ -63,6 +108,10 @@
       line-height: 1.2;
       font-weight: 700;
       color: #fff;
+
+      @media screen and (max-width: 639px) {
+        font-size: 24px;
+      }
     }
 
     &__title {
@@ -71,10 +120,30 @@
       font-weight: 700;
       margin-top: 15px;
       color: #fff;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 16px;
+        max-width: 50%;
+        font-weight: 400;
+        display: block;
+        margin-top: 24px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+        max-width: 70%;
+        margin-top: 8px;
+      }
     }
 
     &__users {
       margin-top: 30px;
+
+      @media screen and (max-width: 1023px) {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+      }
     }
 
     &__user-item {
@@ -84,8 +153,17 @@
       grid-column-gap: 16px;
       font-size: 12px;
 
+      @media screen and (max-width: 1023px) {
+        grid-template-columns: 1fr;
+      }
+
       &+& {
         margin-top: 20px;
+
+        @media screen and (max-width: 1023px) {
+          margin-top: 0;
+          margin-left: 20px;
+        }
       }
     }
 
@@ -96,6 +174,11 @@
       border-radius: 50%;
       overflow: hidden;
       position: relative;
+
+      @media screen and (max-width: 1023px) {
+        grid-row: 1;
+        margin: 0 auto;
+      }
 
       &::before {
         content: '';
@@ -121,11 +204,21 @@
     &__user-position {
       grid-column: 2;
       color: #808080;
+
+      @media screen and (max-width: 1023px) {
+        grid-column: 1;
+        text-align: center;
+      }
     }
 
     &__user-name {
       grid-column: 2;
       color: #00C0D7;
+
+      @media screen and (max-width: 1023px) {
+        grid-column: 1;
+        text-align: center;
+      }
     }
 
     &__btn {
@@ -162,15 +255,95 @@
       }
 
       &:active {}
+
+      @media screen and (max-width: 1023px) {
+        padding: 0;
+        background: none;
+        border: none;
+        backdrop-filter: none;
+        text-decoration: underline;
+        text-align: left;
+        width: fit-content;
+        margin-top: 16px;
+        text-transform: uppercase;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
     }
   }
 
   .slide-two {
     background-color: #5B3E92;
     color: #FFFFFF;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      top: 0;
+      left: 0;
+      background-image: url(../img/slide-2/wave.svg);
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+
+      @media screen and (max-width: 1069px) {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 40%;
+      top: 0;
+      right: 0;
+      background-image: url(../img/slide-2/room.webp);
+      background-image: -webkit-image-set(url(../img/slide-2/room.png) 1x);
+      background-size: cover;
+      background-position: left center;
+      background-repeat: no-repeat;
+      z-index: 0;
+
+      @media screen and (max-width: 1069px) {
+        width: 65%;
+      }
+    }
+
+    &__logo {
+      position: absolute;
+      top: 40px;
+      left: 82px;
+
+      @media screen and (max-width: 1199px) {
+        left: 32px;
+      }
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+    }
 
     &__content {
       flex: 0 0 436px;
+      z-index: 1;
+
+      @media screen and (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 45%;
+        align-self: flex-start;
+        height: 100%;
+        padding: 16px;
+      }
+
+      @media screen and (max-width: 639px) {}
     }
 
     &__title {}
@@ -179,12 +352,35 @@
       font-size: 20px;
       font-weight: 500;
       text-transform: uppercase;
+      display: inline-block;
+      white-space: nowrap;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 32px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 20px;
+      }
     }
 
     &__title-text {
       font-size: 20px;
       font-weight: 500;
       text-transform: uppercase;
+
+      @media screen and (max-width: 1023px) {
+        display: block;
+        text-transform: none;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 16px;
+        max-width: 70%;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
     }
 
     &__btn {
@@ -200,13 +396,30 @@
       max-width: 312px;
       margin-top: 24px;
       border-radius: 4px;
+
+      @media screen and (max-width: 1023px) {
+        margin-top: auto;
+        border-radius: 40px;
+        font-size: 12px;
+        font-weight: 400;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        max-width: 168px;
+      }
     }
+
 
     &__pictures {
       flex: 1 1 auto;
       height: 100%;
       margin-right: -42px;
       margin-bottom: -83px;
+      position: relative;
+      z-index: 1;
+
+      @media screen and (max-width: 1199px) {
+        margin-bottom: -32px;
+      }
     }
 
     &__man {
@@ -217,15 +430,25 @@
 
     &__man-img {
       object-position: right bottom;
+      object-fit: contain;
     }
   }
 
   .slide-three {
     background-color: #7de2f6;
 
+    @media screen and (max-width: 1023px) {
+      flex-direction: column;
+    }
+
     &__content {
       flex: 0 0 364px;
       font-weight: 700;
+
+      @media screen and (max-width: 1023px) {
+        flex: 0 0 auto;
+        width: 100%;
+      }
     }
 
     &__title {
@@ -236,11 +459,27 @@
     &__title-sup {
       display: block;
       font-size: 43px;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 16px;
+      }
     }
 
     &__title-sub {
       display: block;
       font-size: 70px;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 39px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 26px;
+      }
     }
 
     &__faq {
@@ -248,6 +487,14 @@
       color: #27aae0;
       margin-top: 16px;
       font-size: 24px;
+
+      @media screen and (max-width: 1023px) {
+        margin-top: 8px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
     }
 
     &__hashtag {
@@ -255,12 +502,28 @@
       color: #ec5858;
       margin-top: 16px;
       font-size: 24px;
+
+      @media screen and (max-width: 1023px) {
+        margin-top: 8px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
     }
 
     &__btn {
       margin-top: 24px;
       display: block;
       color: #ffffff;
+
+      @media screen and (max-width: 1023px) {
+        margin-top: 8px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
     }
 
     &__pic {
@@ -268,6 +531,11 @@
       height: 100%;
       margin-right: -42px;
       margin-bottom: -84px;
+
+      @media screen and (max-width: 1199px) {
+        margin-right: 0;
+        margin-bottom: -32px;
+      }
     }
 
     &__img {
@@ -280,12 +548,25 @@
     background-color: #3B5771;
     padding-bottom: 114px;
 
+    @media screen and (max-width: 1023px) {
+      padding-bottom: 8px;
+    }
+
     &__content {
       flex: 0 0 580px;
+      z-index: 1;
+
+      @media screen and (max-width: 1023px) {
+        flex: 0 0 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &__title {
       line-height: 1.5;
+      display: block;
     }
 
     &__title-sup {
@@ -293,6 +574,10 @@
       font-size: 36px;
       color: #ffffff;
       text-transform: uppercase;
+
+      @media screen and (max-width: 639px) {
+        font-size: 28px;
+      }
     }
 
     &__title-sub {
@@ -300,6 +585,16 @@
       font-size: 36px;
       color: #ffffff;
       text-transform: uppercase;
+
+      @media screen and (max-width: 1023px) {
+        display: block;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 16px;
+      }
     }
 
     &__btn {
@@ -313,8 +608,20 @@
       background-image: linear-gradient(90deg, rgba(85, 182, 192, 1) 0%, rgba(250, 147, 142, 1) 100%);
       box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.2),
         -8px -8px 32px 0 rgba(255, 255, 255, 0.2);
-      ;
       font-weight: 500;
+
+      @media screen and (max-width: 1023px) {
+        background-image: none;
+        background-color: #72B9C2;
+        width: fit-content;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 40px;
+        border: none;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: auto;
+      }
     }
 
     &__btn-icon {
@@ -323,6 +630,10 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
 
       &.--smile {
         background-image: url(../img/slide-4/smile.svg);
@@ -339,9 +650,28 @@
       flex: 1 1 auto;
       position: relative;
       left: -5%;
+
+      @media screen and (max-width: 1199px) {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        right: 16px;
+        transform: translateY(-50%);
+        height: 50%;
+        width: 50%;
+        z-index: 0;
+      }
+
+      @media screen and (max-width: 639px) {
+        top: auto;
+        bottom: 16px;
+        transform: none;
+      }
     }
 
-    &__img {}
+    &__img {
+      object-fit: contain;
+    }
   }
 
   .slide-five {
@@ -353,9 +683,28 @@
     background-size: 40% auto;
     padding-left: 40px;
 
+    @media screen and (max-width: 1023px) {
+      background-image: url(../img/slide-5/doctors.webp);
+      background-image: -webkit-image-set(url(../img/slide-5/doctors.png) 1x);
+      background-position: right bottom;
+      padding-left: 8px;
+    }
+
     &__logo {
       height: 120px;
       width: 148px;
+
+      @media screen and (max-width: 1023px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      @media screen and (max-width: 639px) {
+        width: 104px;
+        height: 96px;
+        top: -8px;
+      }
     }
 
     &__logo-img {
@@ -367,12 +716,30 @@
       flex: 0 0 60%;
       color: #ffffff;
       margin-left: auto;
+
+      @media screen and (max-width: 1023px) {
+        margin-left: 0;
+        margin-right: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+      }
     }
 
     &__date {
       display: block;
       font-size: 28px;
       font-weight: 500;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 20px;
+        max-width: 60%
+      }
+
+      @media screen and (max-width: 1023px) {
+        font-size: 16px;
+      }
     }
 
     &__date-icon {
@@ -381,11 +748,24 @@
       width: 1.25em;
       background-image: url(../img/slide-5/calendar.svg);
       @include bg ('contain');
-      margin-right: 12px;
+      margin-right: 0.25em;
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
     }
 
     &__sup-text {
       display: block;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 16px;
+        max-width: 60%;
+      }
+
+      @media screen and (max-width: 1023px) {
+        font-size: 12px;
+      }
     }
 
     &__title {
@@ -395,10 +775,32 @@
       line-height: 1.5;
       max-width: 530px;
       margin-top: 24px;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 20px;
+        line-height: 1.25;
+        max-width: 70%;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 16px;
+        margin-top: 8px;
+        max: width 80%;
+      }
     }
 
     &__speaker {
       margin-top: 32px;
+
+      @media screen and (max-width: 1023px) {
+        flex-direction: column;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      @media screen and (max-width: 639px) {
+        max-width: 70%;
+      }
     }
 
     &__ava {
@@ -409,13 +811,28 @@
       flex: 0 0 60px;
       border: 1px solid #a4e2e9;
       margin-right: 16px;
+
+      @media screen and (max-width: 1023px) {
+        margin-right: 0;
+
+        @media screen and (max-width: 639px) {
+          height: 32px;
+          width: 32px;
+          flex: 0 0 32px;
+        }
+
+      }
     }
 
     &__user-img {
       object-fit: cover;
     }
 
-    &__speaker-text {}
+    &__speaker-text {
+      @media screen and (max-width: 1023px) {
+        margin-top: 8px;
+      }
+    }
 
     &__speaker-top {
       display: block;
@@ -427,11 +844,19 @@
     &__speaker-name {
       display: block;
       font-size: 16px;
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
     }
 
     &__speaker-pos {
       display: block;
       font-size: 12px;
+
+      @media screen and (max-width: 639px) {
+        font-size: 8px;
+      }
     }
 
     &__btn {
@@ -448,6 +873,18 @@
       text-decoration: none;
       box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.2),
         -8px -8px 32px 0 rgba(255, 255, 255, 0.2);
+
+      @media screen and (max-width: 1023px) {
+        border-radius: 40px;
+        max-width: 136px;
+
+        font-weight: 400;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        margin-top: 8px;
+        font-size: 12px;
+      }
+
     }
   }
 
@@ -458,16 +895,42 @@
     background-repeat: no-repeat;
     background-position: right center;
 
+    @media screen and (max-width: 1023px) {
+      background-position: 90% 0;
+      background-size: contain;
+    }
+
+    @media screen and (max-width: 639px) {
+      background-position: 90% 0;
+      background-size: auto 100%;
+    }
+
     &__content {
       width: 100%;
       max-width: 604px;
       color: #4a4a4a;
+
+      @media screen and (max-width: 1199px) {
+        width: 50%;
+      }
+
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+      }
     }
 
     &__title {
       display: block;
       font-size: 48px;
       font-weight: 700;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 42px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 28px;
+      }
     }
 
     &__subtitle {
@@ -475,12 +938,33 @@
       margin-top: 12px;
       font-weight: 700;
       font-size: 24px;
+
+      @media screen and (max-width: 1023px) {
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 16px;
+        max-width: 60%;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
     }
 
     &__list {
       margin-top: 32px;
       list-style-type: "—";
       padding-left: 0.75em;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 12px;
+        max-width: 60%;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 8px;
+        margin-top: 12px;
+      }
     }
 
     &__list-item {
@@ -488,6 +972,10 @@
 
       &+& {
         margin-top: 12px;
+
+        @media screen and (max-width: 639px) {
+          margin-top: 4px;
+        }
       }
     }
 
@@ -505,5 +993,155 @@
       width: 100%;
       max-width: 214px;
       text-decoration: none;
+
+      @media screen and (max-width: 1023px) {
+        color: #4a4a4a;
+        font-size: 12px;
+        background: #D6E8FF;
+        max-width: 136px;
+        box-shadow: none;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .slide-seven {
+    background-color: #f87762;
+    position: relative;
+    background-image: url(../img/slide-7/doctor.webp);
+    background-image: -webkit-image-set(url(../img/slide-7/doctor.png) 1x);
+    background-position: right bottom;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+
+    &__content {
+      max-width: 540px;
+      color: #ffffff;
+    }
+
+    &__text-sup {
+      display: block;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 20px;
+      letter-spacing: 0.025em;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 16px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
+    }
+
+    &__title {
+      display: block;
+      font-size: 36px;
+      font-weight: 700;
+      margin-top: 16px;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 24px;
+        max-width: 70%;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 16px;
+      }
+    }
+
+    &__bonus {
+      margin-top: 70px;
+      font-size: 24px;
+
+      @media screen and (max-width: 1023px) {
+        margin-top: 32px;
+      }
+
+      @media screen and (max-width: 639px) {}
+    }
+
+    &__bonus-title {
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-right: 8px;
+      border-right: 2px solid #e51320;
+      line-height: 1.25;
+    }
+
+    &__bonus-text {
+      padding-left: 8px;
+      font-size: 12px;
+
+      @media screen and (max-width: 639px) {
+        font-size: 8px;
+      }
+    }
+
+    &__btn {
+      display: block;
+      margin-top: 60px;
+      color: #ffffff;
+      background-color: #e51320;
+      font-weight: 500;
+      font-size: 12px;
+      width: 100%;
+      max-width: 214px;
+      border-radius: 32px;
+      text-align: center;
+      text-decoration: none;
+      padding: 8px 12px;
+
+      @media screen and (max-width: 1023px) {
+        background-color: #00a0cc;
+        text-transform: uppercase;
+        max: width 136px;
+        font-size: 12px;
+      }
+
+      @media screen and (max-width: 639px) {
+        margin-top: 24px;
+      }
+    }
+
+    &__icon {
+      border-radius: 50%;
+      background-color: #fff;
+      display: block;
+      position: absolute;
+      background-size: auto 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+
+      &.--computer {
+        height: 52px;
+        width: 80px;
+        right: 17%;
+        top: 15%;
+        background-image: url(../img/slide-7/comp.svg);
+      }
+
+      &.--molecula {
+        width: 60px;
+        height: 40px;
+        right: 25%;
+        top: 20%;
+        background-image: url(../img/slide-7/molecula.svg);
+      }
+
+      &.--brain {
+        height: 48px;
+        width: 72px;
+        right: 19%;
+        top: 27%;
+        background-image: url(../img/slide-7/brain.svg);
+      }
     }
   }
