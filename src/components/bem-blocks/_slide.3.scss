@@ -1,0 +1,167 @@
+  .slide-three {
+    background-color: #7de2f6;
+
+    @media screen and (max-width: 1023px) {
+      flex-direction: column;
+    }
+
+    &__content {
+      flex: 0 0 364px;
+      font-weight: 700;
+
+      @media screen and (max-width: 1023px) {
+        flex: 0 0 auto;
+        width: 100%;
+      }
+    }
+
+    &__title {
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    &__title-sup {
+      display: block;
+      font-size: 43px;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 16px;
+      }
+    }
+
+    &__title-sub {
+      display: block;
+      font-size: 70px;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 39px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 26px;
+      }
+    }
+
+    &__faq {
+      display: block;
+      color: #27aae0;
+      margin-top: 16px;
+      font-size: 24px;
+
+      @media screen and (max-width: 1023px) {
+        margin-top: 8px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
+    }
+
+    &__hashtag {
+      display: block;
+      color: #ec5858;
+      margin-top: 16px;
+      font-size: 24px;
+
+      @media screen and (max-width: 1023px) {
+        margin-top: 8px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
+    }
+
+    &__btn {
+      margin-top: 24px;
+      display: block;
+      color: #ffffff;
+
+      @media screen and (max-width: 1023px) {
+        margin-top: 8px;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
+    }
+
+    &__pic {
+      flex: 1 1 auto;
+      height: 100%;
+      margin-right: -42px;
+      margin-bottom: -84px;
+
+      @media screen and (max-width: 1199px) {
+        margin-right: 0;
+        margin-bottom: -32px;
+      }
+    }
+
+    &__img {
+      height: 100%;
+      width: 100%;
+      display: block;
+      object-position: center bottom;
+      object-fit: contain;
+    }
+
+    &.intro-slider__item {
+      flex-direction: column;
+
+      .slide-three__content {
+        flex: 0 0 auto;
+        width: 100%;
+      }
+
+      .slide-three__title-sup {
+        font-size: 24px;
+
+        @media screen and (max-width: 639px) {
+          font-size: 16px;
+        }
+      }
+
+      .slide-three__title-sub {
+        font-size: 39px;
+
+        @media screen and (max-width: 639px) {
+          font-size: 26px;
+        }
+      }
+
+      .slide-three__faq {
+        margin-top: 8px;
+
+        @media screen and (max-width: 639px) {
+          font-size: 12px;
+        }
+      }
+
+      .slide-three__hashtag {
+        margin-top: 8px;
+
+        @media screen and (max-width: 639px) {
+          font-size: 12px;
+        }
+      }
+
+      .slide-three__btn {
+        margin-top: 8px;
+
+        @media screen and (max-width: 639px) {
+          font-size: 12px;
+        }
+      }
+
+      .slide-three__pic {
+        @media screen and (max-width: 1699px) {
+          margin-bottom: -42px;
+        }
+      }
+    }
+  }

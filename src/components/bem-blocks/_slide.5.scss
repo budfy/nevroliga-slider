@@ -1,0 +1,329 @@
+  .slide-five {
+    background-color: #3f92a3;
+    background-image: url(../img/slide-5/doctors-invert.webp);
+    background-image: -webkit-image-set(url(../img/slide-5/doctors-invert.png) 1x);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    padding-left: 40px;
+
+    @media screen and (max-width: 1023px) {
+      background-image: url(../img/slide-5/doctors.webp);
+      background-image: -webkit-image-set(url(../img/slide-5/doctors.png) 1x);
+      background-position: right bottom;
+      padding-left: 16px;
+    }
+
+    &__logo {
+      height: 120px;
+      width: 148px;
+
+      @media screen and (max-width: 1023px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      @media screen and (max-width: 639px) {
+        width: 104px;
+        height: 96px;
+        top: -8px;
+      }
+    }
+
+    &__logo-img {
+      height: 100%;
+      width: 100%;
+      object-position: center;
+      display: block;
+      object-fit: contain;
+      margin-bottom: 0;
+    }
+
+    &__content {
+      flex: 0 0 60%;
+      color: #ffffff;
+      margin-left: auto;
+
+      @media screen and (max-width: 1023px) {
+        margin-left: 0;
+        margin-right: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+      }
+    }
+
+    &__date {
+      display: block;
+      font-size: 28px;
+      font-weight: 500;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 20px;
+        max-width: 60%
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 16px;
+      }
+    }
+
+    &__date-icon {
+      display: inline-block;
+      height: 1.25em;
+      width: 1.25em;
+      background-image: url(../img/slide-5/calendar.svg);
+      @include bg ('contain');
+      margin-right: 0.25em;
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    &__sup-text {
+      display: block;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 16px;
+        max-width: 60%;
+      }
+
+      @media screen and (max-width: 1023px) {
+        font-size: 12px;
+      }
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 36px;
+      display: block;
+      line-height: 1.5;
+      max-width: 530px;
+      margin-top: 24px;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 20px;
+        line-height: 1.25;
+        max-width: 70%;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 16px;
+        margin-top: 8px;
+        max-width: 100%;
+      }
+    }
+
+    &__speaker {
+      margin-top: 32px;
+
+      @media screen and (max-width: 1023px) {
+        flex-direction: column;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      @media screen and (max-width: 639px) {
+        max-width: 240px;
+        margin: 8px auto 0;
+      }
+    }
+
+    &__ava {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex: 0 0 60px;
+      border: 1px solid #a4e2e9;
+      margin-right: 16px;
+
+      @media screen and (max-width: 1023px) {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @media screen and (max-width: 639px) {
+        height: 32px;
+        width: 32px;
+        flex: 0 0 32px;
+      }
+    }
+
+    &__user-img {
+      height: 100%;
+      width: 100%;
+      object-position: center;
+      display: block;
+      object-fit: cover;
+    }
+
+    &__speaker-text {
+      @media screen and (max-width: 1023px) {
+        margin-top: 8px;
+      }
+
+      @media screen and (max-width: 639px) {
+        margin-top: 4px;
+      }
+    }
+
+    &__speaker-top {
+      display: block;
+      opacity: 0.75;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    &__speaker-name {
+      display: block;
+      font-size: 16px;
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+        margin-top: 4px;
+      }
+    }
+
+    &__speaker-pos {
+      display: block;
+      font-size: 12px;
+
+      @media screen and (max-width: 639px) {
+        font-size: 8px;
+        margin-top: 4px;
+      }
+    }
+
+    &__btn {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-align: center;
+      max-width: 360px;
+      border-radius: 8px;
+      background-color: #f18e90;
+      padding: 16px;
+      margin-top: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.2),
+        -8px -8px 32px 0 rgba(255, 255, 255, 0.2);
+
+      @media screen and (max-width: 1023px) {
+        border-radius: 40px;
+        max-width: 136px;
+
+        font-weight: 400;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        margin-top: 8px;
+        font-size: 12px;
+      }
+    }
+
+    &.intro-slider__item {
+      background-image: url(../img/slide-5/doctors.webp);
+      background-image: -webkit-image-set(url(../img/slide-5/doctors.png) 1x);
+      background-position: right bottom;
+      padding-left: 16px;
+
+      .slide-five__logo {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @media screen and (max-width: 639px) {
+          width: 104px;
+          height: 96px;
+          top: -8px;
+        }
+      }
+
+      .slide-five__content {
+        margin-left: 0;
+        margin-right: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+      }
+
+      .slide-five__date {
+        font-size: 20px;
+        max-width: 60%;
+
+        @media screen and (max-width: 639px) {
+          font-size: 16px;
+        }
+      }
+
+      .slide-five__date-icon {
+        display: none;
+      }
+
+      .slide-five__sup-text {
+        font-size: 16px;
+        max-width: 60%;
+
+        @media screen and (max-width: 1023px) {
+          font-size: 12px;
+        }
+      }
+
+      .slide-five__title {
+        font-size: 20px;
+        line-height: 1.25;
+        max-width: 70%;
+
+        @media screen and (max-width: 639px) {
+          font-size: 16px;
+          margin-top: 8px;
+          max-width: 100%;
+        }
+      }
+
+      .slide-five__speaker {
+        flex-direction: column;
+        text-align: center;
+        margin-top: auto;
+
+        @media screen and (max-width: 639px) {
+          max-width: 240px;
+          margin: 8px auto 0;
+        }
+      }
+
+      .slide-five__ava {
+        margin-right: auto;
+        margin-left: auto;
+
+        @media screen and (max-width: 639px) {
+          height: 32px;
+          width: 32px;
+          flex: 0 0 32px;
+        }
+      }
+
+      .slide-five__speaker-text {
+        margin-top: 8px;
+
+        @media screen and (max-width: 639px) {
+          margin-top: 4px;
+        }
+      }
+
+      .slide-five__btn {
+        border-radius: 40px;
+        max-width: 136px;
+        font-weight: 400;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        margin-top: 8px;
+        font-size: 12px;
+      }
+    }
+  }

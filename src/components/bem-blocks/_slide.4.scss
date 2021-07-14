@@ -1,0 +1,191 @@
+  .slide-four {
+    background-color: #3B5771;
+    padding-bottom: 114px;
+
+    @media screen and (max-width: 1023px) {
+      padding-bottom: 16px;
+    }
+
+    &__content {
+      flex: 0 0 580px;
+      z-index: 1;
+
+      @media screen and (max-width: 1023px) {
+        flex: 0 0 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__title {
+      line-height: 1.5;
+      display: block;
+    }
+
+    &__title-sup {
+      font-weight: 700;
+      font-size: 36px;
+      color: #ffffff;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 639px) {
+        font-size: 28px;
+      }
+    }
+
+    &__title-sub {
+      font-weight: 700;
+      font-size: 36px;
+      color: #ffffff;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 1023px) {
+        display: block;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: 16px;
+      }
+    }
+
+    &__btn {
+      padding: 16px;
+      border: 2px solid #ffffff;
+      border-radius: 8px;
+      color: #ffffff;
+      text-decoration: none;
+      max-width: 360px;
+      margin-top: 68px;
+      background-image: linear-gradient(90deg, rgba(85, 182, 192, 1) 0%, rgba(250, 147, 142, 1) 100%);
+      box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.2),
+        -8px -8px 32px 0 rgba(255, 255, 255, 0.2);
+      font-weight: 500;
+
+      @media screen and (max-width: 1023px) {
+        background-image: none;
+        background-color: #72B9C2;
+        width: fit-content;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 40px;
+        border: none;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: auto;
+      }
+    }
+
+    &__btn-icon {
+      height: 32px;
+      width: 32px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+
+      &.--smile {
+        background-image: url(../img/slide-4/smile.svg);
+      }
+
+      &.--unsmile {
+        background-image: url(../img/slide-4/unsmile.svg);
+      }
+    }
+
+    &__btn-text {}
+
+    &__pic {
+      flex: 1 1 auto;
+      position: relative;
+      left: -5%;
+
+      @media screen and (max-width: 1199px) {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        right: 16px;
+        transform: translateY(-50%);
+        height: 50%;
+        width: 50%;
+        z-index: 0;
+      }
+
+      @media screen and (max-width: 639px) {
+        top: auto;
+        bottom: 16px;
+        transform: none;
+      }
+    }
+
+    &__img {
+      height: 100%;
+      width: 100%;
+      object-position: center;
+      display: block;
+      object-fit: contain;
+    }
+
+    &.intro-slider__item {
+      padding: 24px;
+      padding-bottom: 16px;
+
+      .slide-four__content {
+        flex: 0 0 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .slide-four__title-sub {
+        display: block;
+        font-size: 24px;
+        font-weight: 400;
+
+
+        @media screen and (max-width: 639px) {
+          font-size: 16px;
+        }
+      }
+
+      .slide-four__btn {
+        background-image: none;
+        background-color: #72B9C2;
+        width: fit-content;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 40px;
+        border: none;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: auto;
+      }
+
+      .slide-four__btn-icon {
+        display: none;
+      }
+
+      .slide-four__pic {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        right: 16px;
+        transform: translateY(-50%);
+        height: 50%;
+        width: 50%;
+        z-index: 0;
+
+
+        @media screen and (max-width: 639px) {
+          top: auto;
+          bottom: 16px;
+          transform: none;
+        }
+      }
+    }
+  }
