@@ -16,13 +16,14 @@
       .swiper-slide {}
     }
 
-    &__slide {
+    &__slide.flex {
       display: flex;
       opacity: .3;
       transition: all .3s linear;
       padding: 42px 42px 42px 82px;
       height: 500px;
       position: relative;
+      flex-wrap: nowrap;
 
       @media screen and (max-width: 1199px) {
         padding: 32px;
